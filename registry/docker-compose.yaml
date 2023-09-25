@@ -1,0 +1,13 @@
+version: "3.8"
+name: "personnal_registry"
+
+
+services:
+  registry:
+    image: registry:2
+    ports:
+      - "8000:5000"
+    environment:
+      REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /datas
+    volumes:
+      - "./datas:/datas"
